@@ -11,7 +11,7 @@ export class UtilisateursComponent {
 
   searchQuery: string = '';
   
-  filteredUsers: any[] = [];
+  filteredUsers: any[]= [];
 
   constructor(private apiService: ApiService) {}
 

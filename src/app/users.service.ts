@@ -15,4 +15,9 @@ export class ApiService {
   return this.http.get<any[]>(`${this.baseUrl}users`);
 }
 
+
+searchUsers(query: string): Observable<any[]> {
+  return this.http.get<any[]>(`${this.baseUrl}users?q=${query}`);
+}
+
 }

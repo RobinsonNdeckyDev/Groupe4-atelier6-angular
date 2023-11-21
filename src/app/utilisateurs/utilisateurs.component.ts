@@ -9,11 +9,25 @@ export class UtilisateursComponent {
 
  users: any[] = [];
 
+  searchQuery: string = '';
+  
+  filteredUsers: any[] = [];
+
   constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.apiService.getUsers().subscribe((data) => {
       this.users = data;
+
+      this.filteredUsers = data;
     });
   }
+
+  
+
+  // searchUsers() {
+  //   this.apiService.searchUsers(this.searchQuery).subscribe((data) => {
+  //     this.filteredUsers = data;
+  //   });
+  // }
 }

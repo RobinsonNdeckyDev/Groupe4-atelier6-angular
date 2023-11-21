@@ -1,1 +1,19 @@
-<p>utilisateurs works!</p>
+
+<h2>Liste des utilisateurs</h2>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let user of users">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ user.name }}</h5>
+                    <p class="card-text">{{ user.email }}</p>
+                    <p class="card-text">{{ user.phone }}</p>
+                    <p class="card-text">{{ user.website }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
